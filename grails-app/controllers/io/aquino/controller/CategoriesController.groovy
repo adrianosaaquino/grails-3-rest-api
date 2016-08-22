@@ -1,7 +1,9 @@
 package io.aquino.controller
 
 import grails.transaction.*
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured(['ROLE_ADMIN'])
 @Transactional(readOnly = true)
 class CategoriesController {
 
@@ -12,7 +14,7 @@ class CategoriesController {
         println "index"
         println "GET /categories"
         categoryRepositoryService.findCategoryByParams()
-        respond "name': 'bla1', 'name2': 'asdasd a sjkad kjasd"
+        respond "name": "bla1", "name2": "asdasd a sjkad kjasd"
     }
 
     def show(Long id) {
