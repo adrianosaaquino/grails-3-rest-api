@@ -4,12 +4,12 @@ class UrlMappings {
 
     static mappings = {
 
-        "/$controller" {
+        "/api/$controller" {
             action = [GET: "index", POST: "save"]
             format = 'json'
         }
 
-        "/$controller/$id?" {
+        "/api/$controller/$id?" {
             action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
             format = 'json'
         }
