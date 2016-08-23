@@ -10,7 +10,7 @@ class UrlMappings {
         }
 
         "/api/$controller/$id?" {
-            action = [GET: "show", PUT: "update", DELETE: "delete", POST: "save"]
+            action = [GET: "show", PUT: "update", DELETE: "delete"]
             format = 'json'
         }
 
